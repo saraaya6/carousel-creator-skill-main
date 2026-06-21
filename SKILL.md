@@ -5,7 +5,7 @@ description: Use this skill when the user asks to create a social media carousel
 
 ---
 name: carousel-creator-v2
-description: Specialized skill for creating professional 10-slide carousels with "سارة المهندسة" branding, Saudi dialect copywriting, and industry-specific visual themes.
+description: Specialized skill for creating professional 10-slide carousels with "BitToBest" branding, Saudi dialect copywriting, and industry-specific visual themes.
 ---
 
 # Carousel Creator (Enhanced Edition)
@@ -13,7 +13,7 @@ description: Specialized skill for creating professional 10-slide carousels with
 This skill produces 10-slide social media carousels as standalone HTML files. Each carousel is optimized for engagement, featuring native Saudi dialect and custom branding.
 
 ## 1. Branding & Visual Identity
-- **Mandatory Branding:** Every single slide must display the text **"سارة المهندسة"** in the top-left corner as a micro-header.
+- **Mandatory Branding:** Every single slide must display the text **"BitToBest"** in the top-left corner as a micro-header.
 - **Dynamic Color Palettes:** Do not use fixed colors. Select a color scheme that matches the topic's industry (e.g., Deep Blues for Tech, Earthy Greens for Sustainability, Vibrant Oranges for Marketing).
 - **Visual Assets:** Integrate creative, topic-relevant CSS styling or image placeholders that align with the chosen theme (Tech, Modern, or Editorial) to ensure a "vibrant" and professional look.
 
@@ -34,7 +34,7 @@ This skill produces 10-slide social media carousels as standalone HTML files. Ea
    - Slide 4-7: Value delivery (Specific facts/steps).
    - Slide 8: The Turning Point / Insight.
    - Slide 9: Practical Action step.
-   - Slide 10: Call to Action (CTA) + "سارة المهندسة" signature.
+   - Slide 10: Call to Action (CTA) + "BitToBest" signature.
 6. **HTML Construction:** Inject slides, chosen theme, and branding into the `template.html`.
 7. **Delivery:** Output the file to `/mnt/user-data/outputs/` and use `present_files`.
 

@@ -373,24 +373,101 @@
 // ============ SLIDE CONTENT ============
 // REPLACE THIS ARRAY WITH YOUR GENERATED SLIDES
 const slides = [
-  { type: 'hook',  label: 'Why Claude',      tag: 'h1', main: 'ChatGPT users are quietly <span class="accent-text">switching.</span>', sub: "Here's why.", footer: 'Swipe' },
-  { type: 'hook',  label: 'The Claim',       tag: 'h2', main: 'One AI is making people <span class="accent-text">10× smarter</span> overnight.', sub: "Most haven't noticed yet.", footer: 'Keep going' },
-  { type: 'hook',  label: 'Sound Familiar',  tag: 'h3', main: "You've been copy-pasting prompts for months.", sub: 'Getting robotic, generic answers.', footer: 'Yep' },
-  { type: 'hook',  label: 'Meet Claude',     tag: 'h2', main: 'Built to actually <em>think</em>.', sub: 'Not just autocomplete the next word.', footer: 'By Anthropic' },
-  { type: 'hook',  label: 'Writes Like You', tag: 'h2', main: 'No stiff phrases. No "delve."', sub: 'Just clean, sharp prose that sounds like <em>you</em>.', footer: 'Finally' },
-  { type: 'hook',  label: 'Reads Anything',  tag: 'h2', main: 'Drop in a 200-page PDF.', sub: 'Claude answers like it <span class="accent-text">wrote the thing.</span>', footer: 'In seconds' },
-  { type: 'stack', label: 'Does It All',     rows: [
-      { cat: 'Coding',   val: 'Debugs entire repos' },
-      { cat: 'Writing',  val: 'Nails your tone' },
-      { cat: 'Research', val: 'Cites real sources' }
-    ], footer: 'All of it' },
-  { type: 'hook',  label: 'The Truth',       tag: 'h2', main: 'Claude isn\'t "another AI."', sub: 'It\'s the one pros quietly use to <em>outwork everyone.</em>', footer: 'Now you know' },
-  { type: 'steps', label: 'Try It Now',      items: [
-      'Go to <span class="accent-text ltr-inline">claude.ai</span>',
-      'Upload your hardest task',
-      'Watch it solve in one shot'
-    ], footer: 'Free to start' },
-  { type: 'cta',   label: 'Your Move',       main: 'Save this.', sub: 'Before your competitors find it.', cta: 'Comment "CLAUDE" for the prompt vault', footer: '★ Save' }
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h1',
+    main: 'تحسب <span class="accent-text">Git</span> هو نفسه <span class="accent-text">GitHub</span>؟ 🤯',
+    sub: 'إذا بتسوي مشروع تخرج أو بتقدم على وظيفة.. تعال أقول لك وش الفرق الحقيقي وبأبسط شكل!',
+    footer: 'اسحب الشاشة'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'مشكلة "الملف النهائي الحقيقي" 💀',
+    sub: 'تذكر لما كنت تكتب بحث وتسميه: (النهائي)، (النهائي 2)، (النهائي والله العظيم)؟<br><br>في الكود هذي الطريقة كارثة.. والـ Git جاء يحلها بالكامل!',
+    footer: 'وش السالفة؟'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'الـ <span class="accent-text">Git</span>: آلة الزمن بجهازك ⏳',
+    sub: 'نظام يشتغل داخل لابتوبك. وظيفته يصور كودك بكل مرحلة.<br><br>لو عدلت شي وخرب المشروع؟ بضغطة زر يرجعك للنسخة اللي كانت شغالة تمام.',
+    footer: 'آلة الزمن الكودية'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'الـ <span class="accent-text">GitHub</span>: سحابة المبرمجين ☁️',
+    sub: 'موقع ترفع عليه اللقطات اللي صورها الـ Git.<br><br>عشان كودك ما يضيع لو خرب جهازك، وعشان تشتغل مع فريقك على نفس المشروع بدون ما يخرب شغل أحد.',
+    footer: 'السحابة البرمجية'
+  },
+  {
+    type: 'stack',
+    label: 'BitToBest',
+    main: 'قاموس الـ <span class="accent-text">Git</span>: على جهازك 💻',
+    sub: 'ثلاثة مفاهيم تدور كلها داخل لابتوبك:',
+    rows: [
+      { cat: 'Repo', val: 'مجلد مشروعك اللي يراقبه الـ Git ويحفظ تاريخه.' },
+      { cat: 'Commit', val: 'لقطة سريعة لحفظ كودك وتوثيق التعديل الحالي.' },
+      { cat: 'Branch', val: 'غصن جانبي تجرب فيه كودك الجديد بدون تخريب الأساسي.' }
+    ],
+    footer: 'قاموس المصطلحات ١'
+  },
+  {
+    type: 'stack',
+    label: 'BitToBest',
+    main: 'تابع القاموس: مع التيم أونلاين ☁️',
+    sub: 'كيف تتواصل مع السحابة والشباب بالعمل الجماعي:',
+    rows: [
+      { cat: 'Push', val: 'ترفع لقطات كودك من جهازك إلى موقع GitHub أونلاين.' },
+      { cat: 'Pull', val: 'تسحب تعديلات فريقك الجديدة والجاهزة لجهازك.' },
+      { cat: 'Merge', val: 'تدمج كودك الجانبي مع الأساسي بعد ما تتأكد منه.' }
+    ],
+    footer: 'قاموس المصطلحات ٢'
+  },
+  {
+    type: 'stack',
+    label: 'BitToBest',
+    main: 'أوامر البداية والتحضير 🧙‍♂️',
+    sub: 'تكتبها في الـ Terminal عشان تبدأ مشروعك وتجهزه:',
+    rows: [
+      { cat: 'git init', val: 'تشغل الـ Git في مجلد مشروعك لأول مرة.' },
+      { cat: 'git add .', val: 'تجهز كل الملفات اللي غيرتها عشان تتصور بالكامل.' }
+    ],
+    footer: 'الأوامر السحرية ١'
+  },
+  {
+    type: 'stack',
+    label: 'BitToBest',
+    main: 'أوامر الحفظ والرفع أونلاين 🚀',
+    sub: 'عشان توثق وترفع تعبك وتشاركه مع التيم:',
+    rows: [
+      { cat: 'git commit -m "رسالة"', val: 'تحفظ اللقطة بجهازك مع شرح بسيط للتعديل.' },
+      { cat: 'git push origin main', val: 'ترفع شغلك واللقطات الحالية أونلاين على GitHub.' },
+      { cat: 'git status', val: 'تشوف الملفات اللي تعدلت ولسه ما حفظتها.' }
+    ],
+    footer: 'الأوامر السحرية ٢'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'نصيحة من تجربة ✨',
+    sub: 'تكفى.. لا تكتب في الـ Commit رسالة زي "fixed" أو "تعديل".<br><br>اكتب وش غيرت بالضبط بذكاء. بعد 6 شهور لما ترجع لكودك، بتشكر نفسك وتدعي لي! 😉',
+    footer: 'نصيحة BitToBest'
+  },
+  {
+    type: 'cta',
+    label: 'BitToBest',
+    main: 'احفظه وشاركه! 🎓🔥',
+    sub: 'الحين وضحت لك الصورة؟<br><br>احفظ البوست لأنك بتحتاجه وقت الزنقة، ورسله لقروب التخرج عشان ترتاحون من حوسة الملفات!',
+    cta: 'اكتب "جيت" بالتعليقات وأرسل لك ملخص كامل لأشهر أوامر Git اللي تنقذ حياتك!',
+    footer: '★ BitToBest'
+  }
 ];
 
 // Color rhythm — same for every theme/language
@@ -475,7 +552,10 @@ function renderSlides() {
       body = `<${tag}>${s.main}</${tag}>`;
       if (s.sub) body += `<div style="height:20px;"></div><div class="body-text" style="opacity:0.6;">${s.sub}</div>`;
     } else if (s.type === 'stack') {
-      body = `<div class="stack">${s.rows.map(r => `<div class="row"><div class="cat">${r.cat}</div><div class="val">${r.val}</div></div>`).join('')}</div>`;
+      body = '';
+      if (s.main) body += `<h2>${s.main}</h2>`;
+      if (s.sub) body += `<div style="height:12px;"></div><div class="body-text" style="opacity:0.6;font-size:16px;line-height:1.4;margin-bottom:12px;">${s.sub}</div>`;
+      body += `<div class="stack" style="gap:14px;">${s.rows.map(r => `<div class="row" style="padding-top:8px;gap:2px;"><div class="cat" style="font-size:11px;margin-bottom:2px;">${r.cat}</div><div class="val" style="font-size:18px;">${r.val}</div></div>`).join('')}</div>`;
     } else if (s.type === 'steps') {
       body = `<div>${s.items.map((t, idx) => `<div class="step"><span class="step-num">${String(idx+1).padStart(2,'0')}</span><span class="step-text">${t}</span></div>`).join('')}</div>`;
     } else if (s.type === 'cta') {
@@ -591,7 +671,7 @@ async function downloadImages() {
     const content = await zip.generateAsync({type: "blob"});
     const link = document.createElement('a');
     link.href = URL.createObjectURL(content);
-    link.download = "BitToBest_Carousels.zip";
+    link.download = "منشورات_BitToBest_المهندسة.zip";
     link.click();
 
     btn.textContent = '📷 تحميل كصور (ZIP)';

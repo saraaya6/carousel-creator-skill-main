@@ -10,7 +10,7 @@ with open(template_path, 'r', encoding='utf-8') as f:
 slides_js = """[
   {
     type: 'hook',
-    label: 'سارة المهندسة',
+    label: 'BitToBest',
     tag: 'h1',
     main: 'تتابع كورس ورا كورس ولسا <span class="accent-text">مو جاهز؟</span>',
     sub: 'تعال أطلعك من "جحيم الكورسات"🛑',
@@ -18,7 +18,7 @@ slides_js = """[
   },
   {
     type: 'hook',
-    label: 'سارة المهندسة',
+    label: 'BitToBest',
     tag: 'h2',
     main: 'تجميع الشهادات يعطيك <span class="accent-text">شعور وهمي</span> بالإنجاز.',
     sub: 'بينما الحقيقة؟ أنت جالس تنسخ كود المدرب بدون ما تفهم كيف تبني بنفسك.',
@@ -26,7 +26,7 @@ slides_js = """[
   },
   {
     type: 'hook',
-    label: 'سارة المهندسة',
+    label: 'BitToBest',
     tag: 'h3',
     main: 'تحس بالأمان والفيديو شغال، وتضيع أول ما تفتح صفحة بيضاء؟',
     sub: 'دماغك يتعرف على الحل بسهولة بس ما يعرف يستدعيه لما يكون لحاله. هل قد عشت هذا الشعور؟',
@@ -34,7 +34,7 @@ slides_js = """[
   },
   {
     type: 'hook',
-    label: 'سارة المهندسة',
+    label: 'BitToBest',
     tag: 'h2',
     main: 'الحل يبدأ بـ <span class="accent-text">قاعدة 20/80</span>',
     sub: 'خصص 20% فقط من وقتك لمشاهدة الكورس، والـ 80% الباقية طبق فيها عملياً واغلط براحتك.',
@@ -42,7 +42,7 @@ slides_js = """[
   },
   {
     type: 'hook',
-    label: 'سارة المهندسة',
+    label: 'BitToBest',
     tag: 'h2',
     main: 'الشركات ما توظف <span class="accent-text">جامعي شهادات</span>',
     sub: 'في المقابلات التقنية، محد يهمه كم كورس خلصت. يهمهم كم مشكلة حليت وبنيت بنفسك.',
@@ -50,7 +50,7 @@ slides_js = """[
   },
   {
     type: 'hook',
-    label: 'سارة المهندسة',
+    label: 'BitToBest',
     tag: 'h2',
     main: 'ابنِ مشاريع <span class="accent-text">تعدلها بنفسك</span>',
     sub: 'إذا طبقت مشروع كورس، غير فيه! أضف ميزة جديدة، غير التصميم، خله يخصك. كذا تبني عضلاتك البرمجية.',
@@ -58,7 +58,7 @@ slides_js = """[
   },
   {
     type: 'stack',
-    label: 'سارة المهندسة',
+    label: 'BitToBest',
     rows: [
       { cat: 'جامع الشهادات', val: 'ينسخ الكود ويجمع ورق' },
       { cat: 'المبرمج الحقيقي', val: 'يغلط، يبحث، ويبني مشاريع' },
@@ -68,7 +68,7 @@ slides_js = """[
   },
   {
     type: 'hook',
-    label: 'سارة المهندسة',
+    label: 'BitToBest',
     tag: 'h2',
     main: 'التعلم مو بكثرة الفيديوهات.',
     sub: 'التعلم الحقيقي هو عدد المرات اللي <span class="accent-text">تعطل فيها الكود</span> وعرفت كيف تحل المشكلة بنفسك.',
@@ -76,7 +76,7 @@ slides_js = """[
   },
   {
     type: 'steps',
-    label: 'سارة المهندسة',
+    label: 'BitToBest',
     items: [
       'قفل الكورس وابدأ فكرة مشروع بسيطة',
       'ابحث بالـ Documentation وحل مشاكلك بنفسك',
@@ -86,11 +86,11 @@ slides_js = """[
   },
   {
     type: 'cta',
-    label: 'سارة المهندسة',
+    label: 'BitToBest',
     main: 'جاهز للهروب؟',
     sub: 'لا تخلي الكورسات تخدعك وتضيع وقتك، ابدأ ابنِ معرض أعمالك اليوم.',
     cta: 'اكتب "جاهز" بالتعليقات وأرسل لك دليل بناء أول مشروع حقيقي بنفسك!',
-    footer: '★ سارة المهندسة'
+    footer: '★ BitToBest'
   }
 ]"""
 
@@ -99,7 +99,7 @@ content = re.sub(r'const slides = \[.*?\];', f'const slides = {slides_js};', con
 
 # Replace the default theme and language
 content = content.replace("applyLanguage('en');", "applyLanguage('ar');")
-content = content.replace("applyTheme('tech');", "applyTheme('tech');")  # Already tech, but to be sure
+  # Already tech, but to be sure
 
 # Make sure outputs directory exists
 output_dir = '/Users/sartmhmdalmry/Desktop/carousel-creator-skill-main/outputs'
