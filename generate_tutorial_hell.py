@@ -4,7 +4,7 @@ import os
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description="Generate BitToBest Tutorial Hell Carousel")
-parser.add_argument("--dark", type=str, default="#1e0b36", help="Custom dark hex color (e.g. #1e0b36)")
+parser.add_argument("--dark", type=str, default="#0A192F", help="Custom dark hex color (e.g. #0A192F)")
 parser.add_argument("--light", type=str, default="#ffffff", help="Custom light hex color (e.g. #ffffff)")
 args = parser.parse_args()
 
@@ -97,7 +97,7 @@ slides_js = """[
     main: 'جاهز للهروب؟',
     sub: 'لا تخلي الكورسات تخدعك وتضيع وقتك، ابدأ ابنِ معرض أعمالك اليوم.',
     cta: 'اكتب "جاهز" بالتعليقات وأرسل لك دليل بناء أول مشروع حقيقي بنفسك!',
-    footer: '★ BitToBest'
+    footer: '★ حفظ'
   }
 ]"""
 
@@ -108,7 +108,7 @@ content = re.sub(r'const slides = \[.*?\];', f'const slides = {slides_js};', con
 content = content.replace("applyLanguage('en');", "applyLanguage('ar');")
 
 # Replace custom color values inside init call
-content = content.replace("applyCustomColors('#1e0b36', '#ffffff');", f"applyCustomColors('{args.dark}', '{args.light}');")
+content = content.replace("applyCustomColors('#0A192F', '#ffffff');", f"applyCustomColors('{args.dark}', '{args.light}');")
 
 # Make sure outputs directory exists
 output_dir = os.path.join(script_dir, 'outputs')

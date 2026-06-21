@@ -4,7 +4,7 @@ import os
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description="Generate BitToBest Error Handling Carousel")
-parser.add_argument("--dark", type=str, default="#1e0b36", help="Custom dark hex color (e.g. #1e0b36)")
+parser.add_argument("--dark", type=str, default="#0A192F", help="Custom dark hex color (e.g. #0A192F)")
 parser.add_argument("--light", type=str, default="#ffffff", help="Custom light hex color (e.g. #ffffff)")
 args = parser.parse_args()
 
@@ -20,7 +20,7 @@ slides_json = """[
   { type: 'hook',  label: 'BitToBest', tag: 'h2', main: 'كلنا نمر بنفس الشعور:', sub: 'تخلص الميزة (Feature)، تفرح وتعمل Push.. وفجأة السيرفر يطيح!<br><br>السبب غالباً مو إنك مبرمج سيء، السبب هو غياب الـ Error Handling الصحيح.', footer: 'المشكلة' },
   { type: 'hook',  label: 'BitToBest', tag: 'h3', main: 'القاعدة الذهبية في BitToBest:', sub: 'لا تفترض أبداً أن <strong>"كل شيء تمام".</strong><br><br>استخدم <span class="accent-text ltr-inline">try-catch</span> دائماً، وتوقع غير المتوقع (مثل انقطاع الاتصال بقاعدة البيانات أو مدخلات خاطئة).', footer: 'الحل اللطيف' },
   { type: 'hook',  label: 'BitToBest', tag: 'h3', main: 'ابدأ اليوم:', sub: 'بدلاً من طباعة الخطأ بـ <strong>console.log(error)</strong>..<br><br>استخدم نظام Log محترم يوضح لك (أين ومتى ولماذا) حدثت المشكلة لتصلحها في ثوانٍ.', footer: 'نصيحة سريعة' },
-  { type: 'cta',   label: 'BitToBest', main: 'شاركنا في التعليقات:', sub: 'وش أغرب "Bug" واجهك وخلاك تشك بمهاراتك البرمجية؟ 🛠️', cta: 'للمزيد من الممارسات الاحترافية، تابع خارطة الطريق في موقعنا: bittobest.com', footer: '★ BitToBest' }
+  { type: 'cta',   label: 'BitToBest', main: 'شاركنا في التعليقات:', sub: 'وش أغرب "Bug" واجهك وخلاك تشك بمهاراتك البرمجية؟ 🛠️', cta: 'للمزيد من الممارسات الاحترافية، تابع خارطة الطريق في موقعنا: bittobest.com', footer: '★ حفظ' }
 ]"""
 
 # Replace slides
@@ -30,7 +30,7 @@ content = re.sub(r'const slides = \[.*?\];', f'const slides = {slides_json};', c
 content = content.replace("applyLanguage('en');", "applyLanguage('ar');")
 
 # Replace custom color values inside init call
-content = content.replace("applyCustomColors('#1e0b36', '#ffffff');", f"applyCustomColors('{args.dark}', '{args.light}');")
+content = content.replace("applyCustomColors('#0A192F', '#ffffff');", f"applyCustomColors('{args.dark}', '{args.light}');")
 
 # Make sure outputs directory exists
 output_dir = os.path.join(script_dir, 'outputs')

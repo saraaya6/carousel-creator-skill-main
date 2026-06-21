@@ -4,7 +4,7 @@ import os
 
 # Parse command line arguments
 parser = argparse.ArgumentParser(description="Generate BitToBest Carousel")
-parser.add_argument("--dark", type=str, default="#1e0b36", help="Custom dark hex color (e.g. #1e0b36)")
+parser.add_argument("--dark", type=str, default="#0A192F", help="Custom dark hex color (e.g. #0A192F)")
 parser.add_argument("--light", type=str, default="#ffffff", help="Custom light hex color (e.g. #ffffff)")
 args = parser.parse_args()
 
@@ -47,7 +47,7 @@ content = re.sub(r'const slides = \[.*?\];', f'const slides = {slides_json};', c
 content = content.replace("applyLanguage('en');", "applyLanguage('ar');")
 
 # Replace custom color values inside init call
-content = content.replace("applyCustomColors('#1e0b36', '#ffffff');", f"applyCustomColors('{args.dark}', '{args.light}');")
+content = content.replace("applyCustomColors('#0A192F', '#ffffff');", f"applyCustomColors('{args.dark}', '{args.light}');")
 
 # Save new file
 output_path = os.path.join(script_dir, 'carousel-aws-ar-cloud-computing.html')

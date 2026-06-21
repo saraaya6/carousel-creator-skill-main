@@ -453,11 +453,93 @@
 // ============ SLIDE CONTENT ============
 // REPLACE THIS ARRAY WITH YOUR GENERATED SLIDES
 const slides = [
-  { type: 'hook',  label: 'BitToBest', tag: 'h1', main: 'كودك يشتغل.. <br><strong>بس كم مرة انهار في البرودكشن؟</strong> 🤯', footer: 'اسحب الشاشة' },
-  { type: 'hook',  label: 'BitToBest', tag: 'h2', main: 'كلنا نمر بنفس الشعور:', sub: 'تخلص الميزة (Feature)، تفرح وتعمل Push.. وفجأة السيرفر يطيح!<br><br>السبب غالباً مو إنك مبرمج سيء، السبب هو غياب الـ Error Handling الصحيح.', footer: 'المشكلة' },
-  { type: 'hook',  label: 'BitToBest', tag: 'h3', main: 'القاعدة الذهبية في BitToBest:', sub: 'لا تفترض أبداً أن <strong>"كل شيء تمام".</strong><br><br>استخدم <span class="accent-text ltr-inline">try-catch</span> دائماً، وتوقع غير المتوقع (مثل انقطاع الاتصال بقاعدة البيانات أو مدخلات خاطئة).', footer: 'الحل اللطيف' },
-  { type: 'hook',  label: 'BitToBest', tag: 'h3', main: 'ابدأ اليوم:', sub: 'بدلاً من طباعة الخطأ بـ <strong>console.log(error)</strong>..<br><br>استخدم نظام Log محترم يوضح لك (أين ومتى ولماذا) حدثت المشكلة لتصلحها في ثوانٍ.', footer: 'نصيحة سريعة' },
-  { type: 'cta',   label: 'BitToBest', main: 'شاركنا في التعليقات:', sub: 'وش أغرب "Bug" واجهك وخلاك تشك بمهاراتك البرمجية؟ 🛠️', cta: 'للمزيد من الممارسات الاحترافية، تابع خارطة الطريق في موقعنا: bittobest.com', footer: '★ حفظ' }
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h1',
+    main: 'كودك شغال في ChatGPT.. <br><strong>بس ليش ينهار في البرودكشن؟</strong> 🤯',
+    footer: 'اسحب الشاشة'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'الـ ChatGPT ممتاز للأفكار السريعة..',
+    sub: 'لكن الاعتماد الأعمى عليه صار كابوس! تنسخ الكود، تشغله، وبأول ضغط عمل حقيقي ينهار النظام بالكامل. وش السبب؟',
+    footer: 'المشكلة الحقيقية'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'لأن الـ AI ما يدري عن <strong>سياق مشروعك</strong> بالكامل!',
+    sub: 'الملفات، قواعد البيانات، والربط بين الأجزاء.. كل هالأمور ChatGPT ما يشوفها، فيعطيك كود يهلوس أو يتعارض مع ملفاتك.',
+    footer: 'فجوة السياق'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'الحل؟ الانتقال لـ <strong>النماذج المدمجة (IDEs)</strong>',
+    sub: 'مثل Claude 3.5 Sonnet أو GitHub Copilot داخل بيئة عملك. هذي الأدوات تقرأ مشروعك كامل وتفهم الترابط بين ملفاتك تلقائياً.',
+    footer: 'التحول الجديد'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'اكتب المنطق بنفسك.. <strong>وخل الـ AI يراجعك!</strong>',
+    sub: 'المبرمج المحترف يكتب الهيكل والمنطق الأساسي بيده، ثم يطلب من الـ AI مراجعة الكود، البحث عن الثغرات الأمنية، وتحسين الأداء.',
+    footer: 'الممارسة الصحيحة'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'خل الـ AI يكتب لك <strong>الاختبارات (Tests)</strong>',
+    sub: 'كتابة اختبارات الكود (Unit Tests) تستهلك وقت المبرمج. دع الذكاء الاصطناعي يغطي الحالات المختلفة (Edge Cases) ويوفر وقتك اليوم.',
+    footer: 'تسريع العمل'
+  },
+  {
+    type: 'stack',
+    label: 'BitToBest',
+    main: 'كيف تغيرت طريقة استخدام الـ AI؟',
+    sub: 'الفرق بين استخدام المبتدئ والمطور المحترف للذكاء الاصطناعي:',
+    rows: [
+      { cat: 'مطور ChatGPT', val: 'نسخ ولصق بدون فهم المنطق' },
+      { cat: 'مطور IDE-Integrated', val: 'تعديل الكود في مكانه مع فهم السياق' },
+      { cat: 'المطور المحترف', val: 'استخدام الـ AI كمراجع وموجه ومختبر لكوده' }
+    ],
+    footer: 'مقارنة المنهجية'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'الـ AI أداة لزيادة الإنتاجية.. <strong>وليس تفكيرك الهندسي!</strong>',
+    sub: 'الذكاء الاصطناعي لن يحل محل قدرتك على بناء المنطق وحل المشكلات المعقدة. هو مساعدك الشخصي، وليس رئيس المهندسين.',
+    footer: 'خلاصة القول'
+  },
+  {
+    type: 'steps',
+    label: 'BitToBest',
+    main: 'خطتك اليوم لتغيير المعادلة 🚀',
+    sub: 'ابدأ بتطبيق هذي الخطوات الثلاث في مشروعك القادم:',
+    items: [
+      'استخدم أدوات مثل Cursor أو Copilot داخل الـ IDE',
+      'اكتب الكود الأساسي بنفسك أولاً لتضمن فهمه',
+      'اطلب من الـ AI مراجعة الكود وكتابة الاختبارات'
+    ],
+    footer: 'خطوات التغيير'
+  },
+  {
+    type: 'cta',
+    label: 'BitToBest',
+    main: 'احفظ هذا المنشور 📌',
+    sub: 'ليحميك في المرة القادمة التي تفكر فيها بالنسخ واللصق الأعمى!',
+    cta: 'اكتب "كود" في التعليقات ونرسل لك دليل دمج Claude 3.5 Sonnet مع بيئة تطويرك!',
+    footer: '★ حفظ'
+  }
 ];
 
 // Color rhythm — same for every theme/language
@@ -663,7 +745,7 @@ function applyCustomColors(dark, light) {
 
 // ============ INIT ============
 applyLanguage('ar');
-applyTheme('bittobest');
+applyTheme('tech');
 applyCustomColors('#0A192F', '#ffffff'); // This call is parsed and patched dynamically by the Python generator scripts
 renderSlides();
 
