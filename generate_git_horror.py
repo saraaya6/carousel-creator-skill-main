@@ -1,8 +1,16 @@
+import argparse
 import re
 import os
 
-# Read the template file
-template_path = '/Users/sartmhmdalmry/Desktop/carousel-creator-skill-main/template.html'
+# Parse command line arguments
+parser = argparse.ArgumentParser(description="Generate BitToBest Git Horror Carousel")
+parser.add_argument("--dark", type=str, default="#1e0b36", help="Custom dark hex color (e.g. #1e0b36)")
+parser.add_argument("--light", type=str, default="#ffffff", help="Custom light hex color (e.g. #ffffff)")
+args = parser.parse_args()
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+template_path = os.path.join(script_dir, 'template.html')
+
 with open(template_path, 'r', encoding='utf-8') as f:
     content = f.read()
 
@@ -12,15 +20,14 @@ slides_js = """[
     type: 'hook',
     label: 'BitToBest',
     tag: 'h1',
-    main: 'تحسب <span class="accent-text">Git</span> هو نفسه <span class="accent-text">GitHub</span>؟ 🤯',
-    sub: 'إذا بتسوي مشروع تخرج أو بتقدم على وظيفة.. تعال أقول لك وش الفرق الحقيقي وبأبسط شكل!',
+    main: 'تحسب <strong>Git</strong> هو نفسه <strong>GitHub</strong>؟ 🤯',
     footer: 'اسحب الشاشة'
   },
   {
     type: 'hook',
     label: 'BitToBest',
     tag: 'h2',
-    main: 'مشكلة "الملف النهائي الحقيقي" 💀',
+    main: 'مشكلة <strong>"الملف النهائي الحقيقي"</strong> 💀',
     sub: 'تذكر لما كنت تكتب بحث وتسميه: (النهائي)، (النهائي 2)، (النهائي والله العظيم)؟<br><br>في الكود هذي الطريقة كارثة.. والـ Git جاء يحلها بالكامل!',
     footer: 'وش السالفة؟'
   },
@@ -28,7 +35,7 @@ slides_js = """[
     type: 'hook',
     label: 'BitToBest',
     tag: 'h2',
-    main: 'الـ <span class="accent-text">Git</span>: آلة الزمن بجهازك ⏳',
+    main: 'الـ <strong>Git</strong>: آلة الزمن بجهازك ⏳',
     sub: 'نظام يشتغل داخل لابتوبك. وظيفته يصور كودك بكل مرحلة.<br><br>لو عدلت شي وخرب المشروع؟ بضغطة زر يرجعك للنسخة اللي كانت شغالة تمام.',
     footer: 'آلة الزمن الكودية'
   },
@@ -36,14 +43,14 @@ slides_js = """[
     type: 'hook',
     label: 'BitToBest',
     tag: 'h2',
-    main: 'الـ <span class="accent-text">GitHub</span>: سحابة المبرمجين ☁️',
+    main: 'الـ <strong>GitHub</strong>: سحابة المبرمجين ☁️',
     sub: 'موقع ترفع عليه اللقطات اللي صورها الـ Git.<br><br>عشان كودك ما يضيع لو خرب جهازك، وعشان تشتغل مع فريقك على نفس المشروع بدون ما يخرب شغل أحد.',
     footer: 'السحابة البرمجية'
   },
   {
     type: 'stack',
     label: 'BitToBest',
-    main: 'قاموس الـ <span class="accent-text">Git</span>: على جهازك 💻',
+    main: 'قاموس الـ <strong>Git</strong>: على جهازك 💻',
     sub: 'ثلاثة مفاهيم تدور كلها داخل لابتوبك:',
     rows: [
       { cat: 'Repo', val: 'مجلد مشروعك اللي يراقبه الـ Git ويحفظ تاريخه.' },
@@ -108,31 +115,14 @@ slides_js = """[
 # Replace the slides array in template
 content = re.sub(r'const slides = \[.*?\];', f'const slides = {slides_js};', content, flags=re.DOTALL)
 
-# Add custom brand colors as 'sara_beige' theme (Pure Beige & Black)
-
-
-
-
-# Inject custom brand style rules for pure Beige and Black theme
-
-
-
-
-# Enhance the stack renderer in memory to handle title/subtitle
-old_stack_renderer = 'body = `<div class="stack">${s.rows.map(r => `<div class="row"><div class="cat">${r.cat}</div><div class="val">${r.val}</div></div>`).join(\'\')}</div>`;'
-new_stack_renderer = """body = '';
-      if (s.main) body += `<h2>${s.main}</h2>`;
-      if (s.sub) body += `<div style="height:12px;"></div><div class="body-text" style="opacity:0.6;font-size:16px;line-height:1.4;margin-bottom:12px;">${s.sub}</div>`;
-      body += `<div class="stack" style="gap:14px;">${s.rows.map(r => `<div class="row" style="padding-top:8px;gap:2px;"><div class="cat" style="font-size:11px;margin-bottom:2px;">${r.cat}</div><div class="val" style="font-size:18px;">${r.val}</div></div>`).join('')}</div>`;"""
-
-content = content.replace(old_stack_renderer, new_stack_renderer)
-
-# Replace the default theme and language applications
+# Replace the default language
 content = content.replace("applyLanguage('en');", "applyLanguage('ar');")
 
+# Replace custom color values inside init call
+content = content.replace("applyCustomColors('#1e0b36', '#ffffff');", f"applyCustomColors('{args.dark}', '{args.light}');")
 
 # Make sure outputs directory exists
-output_dir = '/Users/sartmhmdalmry/Desktop/carousel-creator-skill-main/outputs'
+output_dir = os.path.join(script_dir, 'outputs')
 os.makedirs(output_dir, exist_ok=True)
 
 # Define output path

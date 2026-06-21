@@ -452,24 +452,89 @@
 // ============ SLIDE CONTENT ============
 // REPLACE THIS ARRAY WITH YOUR GENERATED SLIDES
 const slides = [
-  { type: 'hook',  label: 'Why Claude',      tag: 'h1', main: 'ChatGPT users are quietly <span class="accent-text">switching.</span>', sub: "Here's why.", footer: 'Swipe' },
-  { type: 'hook',  label: 'The Claim',       tag: 'h2', main: 'One AI is making people <span class="accent-text">10× smarter</span> overnight.', sub: "Most haven't noticed yet.", footer: 'Keep going' },
-  { type: 'hook',  label: 'Sound Familiar',  tag: 'h3', main: "You've been copy-pasting prompts for months.", sub: 'Getting robotic, generic answers.', footer: 'Yep' },
-  { type: 'hook',  label: 'Meet Claude',     tag: 'h2', main: 'Built to actually <em>think</em>.', sub: 'Not just autocomplete the next word.', footer: 'By Anthropic' },
-  { type: 'hook',  label: 'Writes Like You', tag: 'h2', main: 'No stiff phrases. No "delve."', sub: 'Just clean, sharp prose that sounds like <em>you</em>.', footer: 'Finally' },
-  { type: 'hook',  label: 'Reads Anything',  tag: 'h2', main: 'Drop in a 200-page PDF.', sub: 'Claude answers like it <span class="accent-text">wrote the thing.</span>', footer: 'In seconds' },
-  { type: 'stack', label: 'Does It All',     rows: [
-      { cat: 'Coding',   val: 'Debugs entire repos' },
-      { cat: 'Writing',  val: 'Nails your tone' },
-      { cat: 'Research', val: 'Cites real sources' }
-    ], footer: 'All of it' },
-  { type: 'hook',  label: 'The Truth',       tag: 'h2', main: 'Claude isn\'t "another AI."', sub: 'It\'s the one pros quietly use to <em>outwork everyone.</em>', footer: 'Now you know' },
-  { type: 'steps', label: 'Try It Now',      items: [
-      'Go to <span class="accent-text ltr-inline">claude.ai</span>',
-      'Upload your hardest task',
-      'Watch it solve in one shot'
-    ], footer: 'Free to start' },
-  { type: 'cta',   label: 'Your Move',       main: 'Save this.', sub: 'Before your competitors find it.', cta: 'Comment "CLAUDE" for the prompt vault', footer: '★ Save' }
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h1',
+    main: 'تتابع كورس ورا كورس ولسا <strong>مو جاهز؟</strong>',
+    footer: 'اسحب الشاشة'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'تجميع الشهادات يعطيك <strong>شعور وهمي</strong> بالإنجاز.',
+    sub: 'بينما الحقيقة؟ أنت جالس تنسخ كود المدرب بدون ما تفهم كيف تبني بنفسك.',
+    footer: 'السر النفسي خلف الفخ'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h3',
+    main: 'تحس بالأمان والفيديو شغال، وتضيع أول ما تفتح صفحة بيضاء؟',
+    sub: 'دماغك يتعرف على الحل بسهولة بس ما يعرف يستدعيه لما يكون لحاله. هل قد عشت هذا الشعور؟',
+    footer: 'وهم المعرفة'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'الحل يبدأ بـ <strong>قاعدة 20/80</strong>',
+    sub: 'خصص 20% فقط من وقتك لمشاهدة الكورس، والـ 80% الباقية طبق فيها عملياً واغلط براحتك.',
+    footer: 'النسبة الذهبية'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'الشركات ما توظف <strong>جامعي شهادات</strong>',
+    sub: 'في المقابلات التقنية، محد يهمه كم كورس خلصت. يهمهم كم مشكلة حليت وبنيت بنفسك.',
+    footer: 'واقع سوق العمل'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'ابنِ مشاريع <strong>تعدلها بنفسك</strong>',
+    sub: 'إذا طبقت مشروع كورس، غير فيه! أضف ميزة جديدة، غير التصميم، خله يخصك. كذا تبني عضلاتك البرمجية.',
+    footer: 'طريقة التعديل'
+  },
+  {
+    type: 'stack',
+    label: 'BitToBest',
+    rows: [
+      { cat: 'جامع الشهادات', val: 'ينسخ الكود ويجمع ورق' },
+      { cat: 'المبرمج الحقيقي', val: 'يغلط، يبحث، ويبني مشاريع' },
+      { cat: 'الهدف الأهم', val: 'معرض أعمال قوي يثبت قوتك' }
+    ],
+    footer: 'فرق جوهري'
+  },
+  {
+    type: 'hook',
+    label: 'BitToBest',
+    tag: 'h2',
+    main: 'التعلم مو بكثرة الفيديوهات.',
+    sub: 'التعلم الحقيقي هو عدد المرات اللي <strong>تعطل فيها الكود</strong> وعرفت كيف تحل المشكلة بنفسك.',
+    footer: 'منعطف حاسم'
+  },
+  {
+    type: 'steps',
+    label: 'BitToBest',
+    items: [
+      'قفل الكورس وابدأ فكرة مشروع بسيطة',
+      'ابحث بالـ Documentation وحل مشاكلك بنفسك',
+      'ارفع مشاريعك على GitHub ورتب معرض أعمالك'
+    ],
+    footer: 'خطتك للهروب اليوم'
+  },
+  {
+    type: 'cta',
+    label: 'BitToBest',
+    main: 'جاهز للهروب؟',
+    sub: 'لا تخلي الكورسات تخدعك وتضيع وقتك، ابدأ ابنِ معرض أعمالك اليوم.',
+    cta: 'اكتب "جاهز" بالتعليقات وأرسل لك دليل بناء أول مشروع حقيقي بنفسك!',
+    footer: '★ BitToBest'
+  }
 ];
 
 // Color rhythm — same for every theme/language

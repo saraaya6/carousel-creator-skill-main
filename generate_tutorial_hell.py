@@ -1,8 +1,16 @@
+import argparse
 import re
 import os
 
-# Read the template file
-template_path = '/Users/sartmhmdalmry/Desktop/carousel-creator-skill-main/template.html'
+# Parse command line arguments
+parser = argparse.ArgumentParser(description="Generate BitToBest Tutorial Hell Carousel")
+parser.add_argument("--dark", type=str, default="#1e0b36", help="Custom dark hex color (e.g. #1e0b36)")
+parser.add_argument("--light", type=str, default="#ffffff", help="Custom light hex color (e.g. #ffffff)")
+args = parser.parse_args()
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+template_path = os.path.join(script_dir, 'template.html')
+
 with open(template_path, 'r', encoding='utf-8') as f:
     content = f.read()
 
@@ -12,15 +20,14 @@ slides_js = """[
     type: 'hook',
     label: 'BitToBest',
     tag: 'h1',
-    main: 'تتابع كورس ورا كورس ولسا <span class="accent-text">مو جاهز؟</span>',
-    sub: 'تعال أطلعك من "جحيم الكورسات"🛑',
+    main: 'تتابع كورس ورا كورس ولسا <strong>مو جاهز؟</strong>',
     footer: 'اسحب الشاشة'
   },
   {
     type: 'hook',
     label: 'BitToBest',
     tag: 'h2',
-    main: 'تجميع الشهادات يعطيك <span class="accent-text">شعور وهمي</span> بالإنجاز.',
+    main: 'تجميع الشهادات يعطيك <strong>شعور وهمي</strong> بالإنجاز.',
     sub: 'بينما الحقيقة؟ أنت جالس تنسخ كود المدرب بدون ما تفهم كيف تبني بنفسك.',
     footer: 'السر النفسي خلف الفخ'
   },
@@ -36,7 +43,7 @@ slides_js = """[
     type: 'hook',
     label: 'BitToBest',
     tag: 'h2',
-    main: 'الحل يبدأ بـ <span class="accent-text">قاعدة 20/80</span>',
+    main: 'الحل يبدأ بـ <strong>قاعدة 20/80</strong>',
     sub: 'خصص 20% فقط من وقتك لمشاهدة الكورس، والـ 80% الباقية طبق فيها عملياً واغلط براحتك.',
     footer: 'النسبة الذهبية'
   },
@@ -44,7 +51,7 @@ slides_js = """[
     type: 'hook',
     label: 'BitToBest',
     tag: 'h2',
-    main: 'الشركات ما توظف <span class="accent-text">جامعي شهادات</span>',
+    main: 'الشركات ما توظف <strong>جامعي شهادات</strong>',
     sub: 'في المقابلات التقنية، محد يهمه كم كورس خلصت. يهمهم كم مشكلة حليت وبنيت بنفسك.',
     footer: 'واقع سوق العمل'
   },
@@ -52,7 +59,7 @@ slides_js = """[
     type: 'hook',
     label: 'BitToBest',
     tag: 'h2',
-    main: 'ابنِ مشاريع <span class="accent-text">تعدلها بنفسك</span>',
+    main: 'ابنِ مشاريع <strong>تعدلها بنفسك</strong>',
     sub: 'إذا طبقت مشروع كورس، غير فيه! أضف ميزة جديدة، غير التصميم، خله يخصك. كذا تبني عضلاتك البرمجية.',
     footer: 'طريقة التعديل'
   },
@@ -71,7 +78,7 @@ slides_js = """[
     label: 'BitToBest',
     tag: 'h2',
     main: 'التعلم مو بكثرة الفيديوهات.',
-    sub: 'التعلم الحقيقي هو عدد المرات اللي <span class="accent-text">تعطل فيها الكود</span> وعرفت كيف تحل المشكلة بنفسك.',
+    sub: 'التعلم الحقيقي هو عدد المرات اللي <strong>تعطل فيها الكود</strong> وعرفت كيف تحل المشكلة بنفسك.',
     footer: 'منعطف حاسم'
   },
   {
@@ -97,12 +104,14 @@ slides_js = """[
 # Replace the slides array in template
 content = re.sub(r'const slides = \[.*?\];', f'const slides = {slides_js};', content, flags=re.DOTALL)
 
-# Replace the default theme and language
+# Replace the default language
 content = content.replace("applyLanguage('en');", "applyLanguage('ar');")
-  # Already tech, but to be sure
+
+# Replace custom color values inside init call
+content = content.replace("applyCustomColors('#1e0b36', '#ffffff');", f"applyCustomColors('{args.dark}', '{args.light}');")
 
 # Make sure outputs directory exists
-output_dir = '/Users/sartmhmdalmry/Desktop/carousel-creator-skill-main/outputs'
+output_dir = os.path.join(script_dir, 'outputs')
 os.makedirs(output_dir, exist_ok=True)
 
 # Define output path
